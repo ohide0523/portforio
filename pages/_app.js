@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import React from "react"
 
 
+
 import ContextProvider from "../components/Context";
 
 // BottomNavigation 下のメニューボタン
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }) {
 
 
   <Component {...pageProps} />
+
       <footer
         style={{
           position: "fixed",
@@ -45,6 +47,7 @@ function MyApp({ Component, pageProps }) {
             }}
           >
             <Link href="/Top">
+
               <Tooltip title="ホーム" arrow>
                 <BottomNavigationAction
                   label="ホーム"
@@ -75,7 +78,7 @@ function MyApp({ Component, pageProps }) {
             </Link>
 
             <Link href="/menu/[mypage]" as={`/menu/myPage`}>
-              <Tooltip title="マイページ" arrow>
+   <Tooltip title="マイページ" arrow>
                 <BottomNavigationAction
                   label="マイページ"
                   value="mypage"

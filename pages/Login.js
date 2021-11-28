@@ -36,6 +36,7 @@ const Login = () => {
       setIsSearch(true);
     }
     if (isSearch == true) {
+
       setIsSearch(false);
     }
   };
@@ -99,6 +100,7 @@ const googleLogin=()=>{
       setPassword("");
     });
   };
+
 
 
   return (
@@ -180,6 +182,7 @@ const googleLogin=()=>{
               />
               <Switch
                 onChange={googleLogin}
+
                 checked={isLogin}
                 inputProps={{ "aria-label": "controlled" }}
               />
@@ -210,6 +213,7 @@ const googleLogin=()=>{
             />
             <button onClick={createEmailUser}>新規登録</button>
           </div>
+
         </>
       )}
     </>
