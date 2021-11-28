@@ -1,5 +1,9 @@
 import Link from "next/link"
 import "../styles/globals.css";
+import React from "react"
+
+
+
 import ContextProvider from "../components/Context";
 
 // BottomNavigation 下のメニューボタン
@@ -10,11 +14,21 @@ import PersonIcon from "@mui/icons-material/Person";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Tooltip from "@mui/material/Tooltip";
+import Login from "./Login";
+
+
 
 function MyApp({ Component, pageProps }) {
+
+  
+
   return (
+    
     <ContextProvider>
-      <Component {...pageProps} />
+
+
+  <Component {...pageProps} />
+
       <footer
         style={{
           position: "fixed",
@@ -32,7 +46,8 @@ function MyApp({ Component, pageProps }) {
               background: "#f4f4f4",
             }}
           >
-            <Link href="/">
+            <Link href="/Top">
+
               <Tooltip title="ホーム" arrow>
                 <BottomNavigationAction
                   label="ホーム"
@@ -62,8 +77,8 @@ function MyApp({ Component, pageProps }) {
               </Tooltip>
             </Link>
 
-            <Link href="/menu/[mypage]" as={`/menu/自分のユーザーのuid`}>
-              <Tooltip title="マイページ" arrow>
+            <Link href="/menu/[mypage]" as={`/menu/myPage`}>
+   <Tooltip title="マイページ" arrow>
                 <BottomNavigationAction
                   label="マイページ"
                   value="mypage"
