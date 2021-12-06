@@ -53,19 +53,13 @@ const Top = () => {
   //   }
   // }, [uid]);
 
-  
-  //リロードして、itemsが0なら元のitemsを呼び出す
   useEffect(()=>{
-    if(items.length>0){
-      getItems()
-    }
-  },[])
-  
-  //絞り込みをした後にnewItemsの値が変更してsetStateが発火する。
-  useEffect(()=>{
-    setItems(newItems)
-  },[newItems])
+    console.log(items)
+  },[ewItems])
 
+  useEffect(()=>{
+    console.log(items)
+  },[])
 
   // 検索をする処理　絞り込み
   const onClickSearch_category = () => {
@@ -76,7 +70,8 @@ const Top = () => {
       .get()
       .then((res) => {
         res.forEach((doc) => {
-          setNewItems(prev=>[...prev,doc.data()])
+          setNewItems([doc.data()])
+         
           setIsSearch(false);
           
         });

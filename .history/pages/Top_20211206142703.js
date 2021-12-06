@@ -61,12 +61,9 @@ const Top = () => {
     }
   },[])
   
-  //絞り込みをした後にnewItemsの値が変更してsetStateが発火する。
   useEffect(()=>{
     setItems(newItems)
   },[newItems])
-
-
   // 検索をする処理　絞り込み
   const onClickSearch_category = () => {
    

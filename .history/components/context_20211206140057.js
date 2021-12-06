@@ -170,7 +170,7 @@ const ContextProvider = ({ children }) => {
       snapshot.docChanges().forEach((change)=>{
         if(change.type==="added"){
           setItems(prev=>[...prev,change.doc.data()])
-          
+          cono
         }
 
       })

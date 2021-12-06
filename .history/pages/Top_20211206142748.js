@@ -61,7 +61,8 @@ const Top = () => {
     }
   },[])
   
-  //絞り込みをした後にnewItemsの値が変更してsetStateが発火する。
+  //絞り込みをした後にnewItemsの値が変更してsetSa
+  tate
   useEffect(()=>{
     setItems(newItems)
   },[newItems])
