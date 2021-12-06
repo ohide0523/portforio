@@ -45,7 +45,7 @@ const Top = () => {
   const [category, setCategory] = useState("");
   const [category2, setCategory2] = useState("");
   const { setItems } = useContext(Context);
-  const [newItems,setNewItems] = useState([])
+  const [newItems,]
 
   // useEffect(() => {
   //   if (!uid) {
@@ -53,30 +53,32 @@ const Top = () => {
   //   }
   // }, [uid]);
 
-  
-  //リロードして、itemsが0なら元のitemsを呼び出す
   useEffect(()=>{
-    if(items.length>0){
-      getItems()
-    }
-  },[])
-  
-  //絞り込みをした後にnewItemsの値が変更してsetStateが発火する。
-  useEffect(()=>{
-    setItems(newItems)
-  },[newItems])
+    console.log(items)
+  },[items])
 
+  useEffect(()=>{
+    console.log(items)
+  },[])
 
   // 検索をする処理　絞り込み
   const onClickSearch_category = () => {
-   
+    let newItems = [];
     db.collectionGroup("items")
       .where("category", "array-contains-any", [category,category2])
       .limit(30)
       .get()
       .then((res) => {
         res.forEach((doc) => {
-          setNewItems(prev=>[...prev,doc.data()])
+          newItems.push({
+            title: doc.data().title,
+            img: doc.data().img,
+            id: doc.data().id,
+            userId: doc.data().userId,
+            createAt: doc.data().createAt,
+          });
+          
+          setItems(newItems);
           setIsSearch(false);
           
         });

@@ -53,19 +53,18 @@ const Top = () => {
   //   }
   // }, [uid]);
 
-  
-  //リロードして、itemsが0なら元のitemsを呼び出す
   useEffect(()=>{
+    console.log(newItems)
+    setItems(newItems)
+  },[newItems])
+
+  //リロードして、itemsが0なら元のi
+  useEffect(()=>{
+    console.log(items)
     if(items.length>0){
       getItems()
     }
   },[])
-  
-  //絞り込みをした後にnewItemsの値が変更してsetStateが発火する。
-  useEffect(()=>{
-    setItems(newItems)
-  },[newItems])
-
 
   // 検索をする処理　絞り込み
   const onClickSearch_category = () => {
