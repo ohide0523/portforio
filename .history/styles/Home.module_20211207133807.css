@@ -1,0 +1,455 @@
+/* header---------------------------------------------------------------------------------------------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  z-index: 2;
+  background: white;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  margin-bottom: 100px;
+  background: #f4f4f4;
+}
+.header_h1 {
+  flex: 1;
+  margin-left: 20px;
+  text-align: center;
+}
+.header_icons {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.header_searchIcon {
+  font-size: 40px;
+  margin-right: 10px;
+}
+/* -------------------------------------------------------- */
+
+/* main---------------------------------------------------------------------------------------------------------------- */
+.main_top{
+  z-index: 0;
+  margin-top: 100px;
+  margin-bottom:50px;
+  width:100%;
+  height: 100vh;
+  overflow: auto;
+  
+}
+
+.main_topScreen {
+  width: 70%;
+  max-height: 450px;
+  padding: 200px;
+  margin: auto;
+  margin-bottom: 50px;
+  background-image: url("/シーズー１.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+}
+.top_text_L {
+  font-size: 50px;
+  font-weight: normal;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  color: #def10a;
+  text-shadow: 1px 3px 5px black;
+  opacity: 0.8;
+  padding-bottom: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top_text_R {
+  font-size: 50px;
+  font-weight: normal;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  color: #def10a;
+  text-shadow: 1px 0 5px black;
+  opacity: 0.8;
+  padding: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.itemTitle {
+  width: 90%;
+  margin: auto;
+  font-size:20px;
+}
+
+.item_bar{
+  height:50px;
+}
+
+/* -------------------------------------------------------- */
+
+
+/* mypage-------------------------------------------------------- */
+
+.mypage_h1{
+  font-size:40px;
+}
+
+
+.profile_top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width:300px;
+}
+.profile_avatar{
+  width:150px;
+  height:150px;
+}
+
+
+/* 自分が里親を募集したitem　＆　いいねしたワンちゃんたち */
+.item_list{
+  width:90%;
+  height:250px;
+}
+.item_list_bar{
+  height:50px;
+}
+.list_item_arrow{
+  margin-left:50px;
+  margin-top: 130px;
+}
+/* - */
+
+/* フォローリスト */
+
+.follow_list_container{
+  margin-bottom: 100px; 
+  display: flex;
+}
+.follow_list_item_container{
+  display:flex;
+  margin: 13px;
+}
+.follow_list_item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.follow_list_item_icon{
+  width:55px;
+  height:55px;
+
+}
+.follow_list_item_user_text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:15px;
+}
+.follow_list_item_user_name{
+  
+  font-size:15px;
+}
+.follow_list_item_user_follower{
+  
+  font-size:10px;
+}
+
+/* -------------------------------------------------------- */
+
+.chat_space {
+  width: 100%;
+  height: 800px;
+  overflow: auto;
+  background-image: url("/sky.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.balloon_i,
+.balloon_r {
+  margin: 30px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.balloon_r {
+  justify-content: flex-end;
+}
+.faceIcon img {
+  width: 80px;
+  height: auto;
+}
+.balloon_r .faceicon {
+  margin-left: 25px;
+}
+.balloon_l .faceicon {
+  margin-right: 25px;
+}
+.balloon_r .faceicon {
+  order: 2 !important;
+}
+.says {
+  max-width: 500px; /*æœ€å¤§å¹…ã¯ä»»æ„*/
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 17px 13px 15px 18px;
+  border-radius: 12px;
+  background: #00ff00; /*è‰²ã¯ä»»æ„*/
+  box-sizing: border-box;
+  margin: 0 !important;
+  line-height: 1.5;
+  /*   align-items: center; */
+}
+.says p {
+  margin: 8px 0 0 !important;
+}
+.says p:first-child {
+  margin-top: 0 !important;
+}
+.says:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  /*   margin-top:-3px;  */
+}
+.balloon_l .says:after {
+  left: -26px;
+  border-right: 22px solid #00ff00;
+}
+.balloon_r .says:after {
+  right: -26px;
+  border-left: 22px solid #00ff00;
+}
+
+.says_time_l {
+  margin-left: 10px;
+}
+
+.says_time_r {
+  line-height: 0px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.input_form {
+  margin-bottom: 60px;
+  display: flex;
+}
+.input {
+  height: 40px;
+  border-radius: 10px;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+/* タブレットサイズ時 */
+@media (max-width: 767px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* スマホサイズ時 */
+@media screen and (max-width: 479px) {
+  .main_top{
+    z-index: 0;
+    margin-top: 100px;
+    margin-bottom:10px;
+    width:100%;
+   
+    overflow: auto;
+    
+  }
+
+.main_topScreen {
+  width: 80%;
+  height: 100px;
+  padding:70px;
+  margin: auto;
+  margin-bottom:30px;
+  background-image: url("/シーズー１.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+}
+.top_text_L {
+ display:none;
+}
+.top_text_R {
+  display:none;
+}
+
+
+.itemTitle {
+  width: 90%;
+  margin: auto;
+  font-size:17px;
+  line-height:0.7;
+}
+
+.item_img_list{
+  width: 90%;
+  height: 80vh;
+  margin:auto;
+}
+
+.item_bar{
+  height:25px;
+
+}
+
+
+/* mypage-------------------------------------------------------- */
+
+.mypage_h1{
+  font-size:20px;
+}
+
+.profile_top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width:300px;
+}
+.profile_avatar{
+  width:100px;
+  height:100px;
+}
+.profile_h2{
+  line-height:1px;
+  font-size:20px;
+}
+.item_list{
+  width:90%;
+  height:100px;
+}
+
+.item_list_bar{
+  height:30px;
+}
+.list_item_arrow{
+  margin-left:10px;
+  margin-top: 50px;
+}
+/* -------------------------------------------------------- */
+
+}
